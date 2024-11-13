@@ -1,0 +1,8 @@
+conda install -c conda-forge dlib
+conda install pytorch torchvision cpuonly -c pytorch
+conda install -c conda-forge flask
+conda install -c conda-forge einops
+pip install opencv-python
+pip install facenet-pytorch
+pip install face_recognition
+pip install flask_cors
