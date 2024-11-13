@@ -54,7 +54,7 @@ class StorageManager:
                     creation_time = os.path.getctime(file_path)
                     current_time = time()
                     file_age = current_time - creation_time
-                    if file_age > 1800:
+                    if file_age > 1000:
                         os.remove(file_path)
                         logging.info(f"Deleted file: {file_path}")
                     else:
@@ -70,7 +70,7 @@ class StorageManager:
                     creation_time = os.path.getctime(file_path)
                     current_time = time()
                     file_age = current_time - creation_time
-                    if file_age > 1800:
+                    if file_age > 1000:
                         os.remove(file_path)
                         logging.info(f"Deleted file: {file_path}")
                     else:
@@ -86,7 +86,7 @@ class StorageManager:
                     creation_time = os.path.getctime(file_path)
                     current_time = time()
                     file_age = current_time - creation_time
-                    if file_age > 1800:
+                    if file_age > 1000:
                         os.remove(file_path)
                         logging.info(f"Deleted file: {file_path}")
                     else:
