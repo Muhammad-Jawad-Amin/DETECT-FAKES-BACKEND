@@ -120,7 +120,7 @@ def predict_image():
 
         # Prepare additional information for the response
         response_data = {
-            "imageId": image_filename,
+            "imageId": image_filename.removesuffix(".png"),
             "confidenceReal": (1 - y_val) * 100,
             "confidenceFake": y_val * 100,
             "predictedLabel": real_or_fake(y),
@@ -240,7 +240,7 @@ def predict_video():
         end_time = time()  # Ending Time
 
         response_data = {
-            "videoId": video_filename,
+            "videoId": video_filename.removesuffix(".mp4"),
             "confidenceReal": (1 - y_val) * 100,
             "confidenceFake": y_val * 100,
             "predictedLabel": real_or_fake(y),
@@ -286,8 +286,8 @@ def download_thumbnail(filename):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
-    # app.run(port=80, debug=True)
+    # app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(port=80, debug=True)
 
 # Change the host to '0.0.0.0' to make the app accessible from other devices
 # app.run(host="0.0.0.0", port=5000, debug=True)

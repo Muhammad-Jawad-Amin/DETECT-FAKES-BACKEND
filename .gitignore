@@ -161,7 +161,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-Test_Set/
 Trained_Models/
 Processed_Images/
 Processed_Videos/

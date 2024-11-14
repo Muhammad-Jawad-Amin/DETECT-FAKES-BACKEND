@@ -93,3 +93,9 @@ class StorageManager:
                         logging.info(f"File is kept: {file_path}")
             except Exception as e:
                 logging.error(f"Error deleting file {file_path}: {e}")
+
+    def get_file_id(self, filename: str) -> str:
+        if filename.endswith(".png"):
+            return filename.removesuffix(".png")
+        elif filename.endswith(".mp4"):
+            return filename.removesuffix(".png")
